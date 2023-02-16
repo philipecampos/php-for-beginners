@@ -40,6 +40,7 @@ services:
   db:
     image: mysql:latest
     container_name: ${APP_NAME}-db
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_DATABASE}
